@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>吃什么？</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <a href="index.html" class="home-link">返回首页</a>
+    <h1>去小吃街吃什么？</h1>
+    <div id="result">小吃街的菜品</div>
+    <button onclick="generateRandomNumber()">点击随机抽取一种食物</button>
+
+    <script>
+        function generateRandomNumber() {
+            var min = 1;
+            var max = 6;
+            var randomNumber = Math.floor(Math.random() * (max - min + 1)) + min;
+            switch(randomNumber){
+                case 1:
+                    document.getElementById("result").innerHTML = "小米鸡排";
+                    break;
+                case 2:
+                    document.getElementById("result").innerHTML = "KFC";
+                    break;
+                case 3:
+                    document.getElementById("result").innerHTML = "烤肉饭";
+                    break;
+                case 4:
+                    document.getElementById("result").innerHTML = "醉面";
+                    break;
+                case 5:
+                    document.getElementById("result").innerHTML = "铁板爆饭";
+                    break;
+                case 6:
+                    document.getElementById("result").innerHTML = "物美炸鸡";
+                    break;
+            }
+        }
+    </script>
+</body>
+</html>
